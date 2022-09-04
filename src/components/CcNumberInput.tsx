@@ -5,7 +5,7 @@ interface CcNumberInputProps
         React.InputHTMLAttributes<HTMLInputElement>,
         HTMLInputElement
     > {
-    onCcNumberChange: (ccNumber: string) => void
+    onCcNumberChange?: (ccNumber: string) => void
 }
 
 const CcNumberInput = ({ onCcNumberChange, ...props }: CcNumberInputProps) => {
@@ -27,7 +27,7 @@ const CcNumberInput = ({ onCcNumberChange, ...props }: CcNumberInputProps) => {
             }
         }
 
-        onCcNumberChange(newValue)
+        onCcNumberChange && onCcNumberChange(newValue)
         setCcNumber(newValue)
     }
 
