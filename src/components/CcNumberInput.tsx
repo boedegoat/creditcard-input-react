@@ -12,10 +12,11 @@ const CcNumberInput = ({ onCcNumberChange, ...props }: CcNumberInputProps) => {
     const [ccNumber, setCcNumber] = useState('')
 
     const autoAddSpaces: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-        const filteredValue = e.target.value.replace(/[a-zA-Z ]/g, '')
-        const valueWithSpaces = filteredValue.match(/.{1,4}/g)?.join(' ') || ''
-        onCcNumberChange && onCcNumberChange(valueWithSpaces)
-        setCcNumber(valueWithSpaces)
+        const oldValueNoSpaces = e.target.value.replace(/ /g, '')
+        const valueWithNewSpaces =
+            oldValueNoSpaces.match(/.{1,4}/g)?.join(' ') || ''
+        onCcNumberChange && onCcNumberChange(valueWithNewSpaces)
+        setCcNumber(valueWithNewSpaces)
     }
 
     const preventNotNumber: React.KeyboardEventHandler<HTMLInputElement> = (
