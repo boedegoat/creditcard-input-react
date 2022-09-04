@@ -5,7 +5,7 @@
 ## Feature
 
 -   Auto add space every 4 digits
--   Removes inputs other than numbers
+-   Remove inputs other than numbers
 -   Easy to customize to your own (cuz it's unstyled)
 
 ## Install
