@@ -16,6 +16,8 @@ npm i creditcard-input-react
 
 ## Usage
 
+👉 ccNumber : credit card number
+
 ```jsx
 import { CcNumberInput } from 'creditcard-input-react'
 
@@ -27,6 +29,26 @@ const App = () => {
                 placeholder='e.g 1234 1234 1234 1234'
                 onCcNumberChange={(ccNumber) => console.log(ccNumber)}
             />
+        </main>
+    )
+}
+```
+
+you can also store the ccNumber into your own state
+
+```jsx
+import { useState } from 'react'
+import { CcNumberInput } from 'creditcard-input-react'
+
+const App = () => {
+    const [ccNumber, setCcNumber] = useState('')
+
+    return (
+        <main>
+            <CcNumberInput
+                onCcNumberChange={(newCcNumber) => setCcNumber(newCcNumber)}
+            />
+            <div>{ccNumber}</div>
         </main>
     )
 }
