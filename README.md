@@ -2,6 +2,12 @@
 
 ✨ A simple and straightforward react creditcard input component.
 
+## Feature
+
+-   Auto add space every 4 digits
+-   Removes inputs other than numbers
+-   Easy to customize to your own (cuz it's unstyled)
+
 ## Install
 
 ```
@@ -25,12 +31,6 @@ const App = () => {
     )
 }
 ```
-
-## Feature
-
--   Auto add space every 4 digits
--   Removes other input other than number
--   Easy to customize to your own (cuz it's unstyled)
 
 ## Licence
 
