@@ -1,13 +1,14 @@
 {
     "name": "creditcard-input-react",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "type": "module",
     "description": "A simple react credit card input component",
     "repository": "https://github.com/boedegoat/creditcard-input-react",
     "homepage": "https://github.com/boedegoat/creditcard-input-react",
     "files": [
         "dist",
-        "README.md"
+        "README.md",
+        "LICENCE"
     ],
     "main": "./dist/creditcard-input-react.umd.js",
     "module": "./dist/creditcard-input-react.es.js",
